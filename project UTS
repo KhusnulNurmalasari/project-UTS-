@@ -1,0 +1,47 @@
+#Program untuk mendata pasien pada suatu rumah sakit
+#Membuat list kosong untuk data, alamat, usia dan poli
+data = []
+alamat = []
+usia = []
+poli = []
+stop = False
+i = 0
+
+#Mengisi Data pasien
+while(not stop): 
+    data_pasien = input (" Masukkan Nama Pasien : " +format(i))
+    data.append(data_pasien)
+    alamat_pasien = input (" Masukkan alamat pasien : " +format(i))
+    alamat.append(alamat_pasien)
+    usia_pasien = input (" Masukkan usia pasien : " +format(i))
+    usia.append(usia_pasien)
+    #menu pilihan poli
+    print("pilih poli")
+    print("1. poli gigi")
+    print("2. poli anak")
+    print("3. poli jantung")
+    print("4. poli mata")
+    print("5. poli tulang")
+    choice=input("Masukan pilihan(1/2/3/4/5):")
+    poli_pasien = input (" Masukkan poli pasien yang ke : " +format(i))
+    poli.append(poli_pasien)
+    #increment i
+    i += 1
+    tanya = input("ingin mengisi lagi? (y/t):")
+    if (tanya == "t"):
+        stop = true
+        
+    #Cetak semua 
+    print("=" * 45)
+    print("Diperoleh", len(data), "data pasien yaitu :")
+    for dt in data :
+        print("- " +format(dt))
+    print("sesuai urutan data di atas diperoleh", len(alamat), "alamat pasien yaitu :")
+    for al in alamat :
+          print("- " +format(al))
+    print("sesuai urutan data di atas diperoleh", len(usia), "usia pasien yaitu :")
+    for us in usia :
+          print("- " +format(us))
+    print("sesuai urutan data di atas diperoleh", len(poli), "poli pasien yaitu :")
+    for pl in poli :
+              print("- " +format(pl))
